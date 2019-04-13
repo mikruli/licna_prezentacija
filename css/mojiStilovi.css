@@ -1,0 +1,28 @@
+/* Moji stilovi */
+
+img {
+    height: 200px;
+}
+
+/* .biografija {
+    display: inline-block;
+} */
+
+#slika_biograf {
+    width: 25%;
+    float: left;
+}
+
+#tekst_biograf {
+    width: 65%;
+    float: left;
+    text-indent: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        height: 100px;
+    }
+
+}
+

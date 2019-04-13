@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.min.css">
     <!-- I koristim besplatne Font Awesome fontove za znak brenda. -->
     <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <!-- Moji stilovi -->
+    <link rel="stylesheet" type="text/css" href="./css/mojiStilovi.css">
 
     <!-- Neophodni skriptovi jQuery, popper.js i bootstrap.js-->
     <script src="./jquery/jquery-3.3.1.slim.min.js"></script>
@@ -27,7 +29,7 @@
     <nav class="navbar bg-dark navbar-expand-md navbar-dark fixed-top">
         <!-- Umesto loga kompanije stavljam moje incijale. -->
         <!-- <i class="fas fa-code" style="color: white"></i> -->
-        <a class="navbar-brand" href="#"> DK </a>
+        <a class="navbar-brand" href="./index.html"> DK </a>
 
         <!-- Za uredjaje manje od velicine tableta (md) pravi se navbar sa spustajucim elementima. -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseid">
@@ -63,8 +65,80 @@
 
     <main class="container mt-5 pt-5">
         <h1 class="h1"> Kratka biografija </h1>
-        <div class="mt-4" id="kratka_biograf">
-            <img src="./photos/slika_lk.jpg" alt="Tower" class="rounded img-thumbnail d-block" style="height: 200px;">
+        <div class="row mt-4" id="kratka_biograf">
+            <figure id="slika_biograf" class="col-md-3 col-xs-2">
+                <img src="./photos/slika_lk.jpg" alt="Tower" class="rounded">
+            </figure>
+            <p id="tekst_biograf" class="col-md-9 col-xs-10 text-justify">
+                Rođen sam 17.03.1972. godine u Bjelovaru u SFRJ. Osnovnu i srednju školu završio sam u rodnom mestu. Posle završetka srednje škole upisao sam
+                Mašinski fakultet u Beogradu. U toku studiranja sam se opredelio za smer termotehnika, tako da sam završetkom fakultet stekao zvanje diplomiranog
+                mašinskog inženjera - smer termotehnika. Nakon nekoliko godina položio sam stručni ispit iz oblasti mašinstva i protiv-požarne zaštite i stekao
+                licence odgovornog izvođača i odgovornog projektanta termotehničkih instalacija.
+            </p>
+        </div>
+        <h3 class="h3"> Još ponešto </h1>
+        <p> Omiljeni pisac: Fjodor Mihajlovič Dostojevski </p>
+        <p> Omiljeni roman: Zločin i kazna </p>
+        <p> Omiljeni kompozitor: Wolfgang Amadeus Mozart </p>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                Simfonija br. 40<br>
+                <audio controls>
+                    <source src="./mp3/01-Simfonija br. 40 - Molto Allegro.mp3">
+                </audio>
+            </div>
+            <div class="col-md-6 text-center">
+                Salzburška simfonija<br>
+                <audio controls>
+                    <source src="./mp3/02-Simfonija br. 1 - Andante.mp3">
+                </audio>
+            </div>
+            
+        </div>
+        <div class="table-responsive mt-3">
+            <table class="table table-bordered table-striped text-center">
+                <caption style="caption-side: top"> <h3> Hronološki pregled stečenih zvanja i obrazovanja </h3> </caption>
+                <thead class="font-white thead-dark">
+                    <tr>
+                        <th> Godina </th>
+                        <th> Naziv ustanove </th>
+                        <th> Stečeno zvanje </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 1987 </td>
+                        <td> OŠ Milan Bakić Baja </td>
+                        <td> Završio osnovnu školu u Bjelovaru </td>
+                    </tr>
+                    <tr>
+                        <td> 1991 </td>
+                        <td> Matematičko-informatička gimnazija </td>
+                        <td> Prirodoslovno-matematički tehničar (IV stepena) </td>
+                    </tr>
+                    <tr>
+                        <td> 1999 </td>
+                        <td> Mašinski Fakultet u Beogradu </td>
+                        <td> Diplomirani mašinski inženjer </td>
+                    </tr>
+                    <tr>
+                        <td> 2004 </td>
+                        <td> Ministarstvo za kapitalne investicije </td>
+                        <td> Položen stručni ispit iz mašinstva </td>
+                    </tr>
+                    <tr>
+                        <td> 2008 </td>
+                        <td> Ministartvo unutrašnjih poslova </td>
+                        <td> Položen stručni ispit iz zaštite od požara </td>
+                    </tr>
+                    <tr>
+                        <td> 2005 </td>
+                        <td> Inženjerska komora Srbija </td>
+                        <td> Licenca odgovornog projektanta i izvođača termotehničkih instalacija </td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </div>
             
 
