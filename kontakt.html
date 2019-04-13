@@ -3,10 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Autor prezentacije i alat koji je koristen za izradu prezentacije -->
+    <meta name="author" content="Dejan Kumric">
+    <meta name="generator" content="Visual Studio Code">
+
+    <!-- Za izradu prezentacije koristi se lokalna kopija Bootstrap-a 4. -->
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap.min.css">
+    <!-- I koristim besplatne Font Awesome fontove. -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <!-- moji dodatni stilovi -->
+    <link rel="stylesheet" type="text/css" href="">
+
+    <!-- Neophodni skriptovi jQuery, popper.js i bootstrap.js-->
+    <script src="./jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Kontakt </title>
 </head>
 <body>
+    <!-- NAVIGACIONI BAR -->
+    <nav class="navbar bg-dark navbar-expand-md navbar-dark fixed-top">
+        <!-- Umesto loga kompanije stavljam moje incijale. -->
+        <a class="navbar-brand" href="#"> DK </a>
+
+        <!-- Za uredjaje manje od velicine tableta (md) pravi se navbar sa spustajucim elementima. -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseid">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapseid">
+            <!-- pomocu liste dodajemo elemente navigacionog bara -->
+
+            <ul class="navbar-nav">
+                
+                <!-- pomocu li se dodaje svaki link posebno -->
+                <!-- strana o meni ili index.html -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html"> O meni </a>
+                </li>
+
+                <!-- strana kontakt ili kontakt.html -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./kontakt.html"> Kontakt </a>
+                </li>
+
+                <!-- strana projekti ili projekti.html -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./projekti.html"> Projekti </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <main class="">
+        <div class="container mt-5 pt-5">
+            <form method="" action="" id="mojaforma">
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="form-group col-md-12 col-xs-12">
+                            <label for="ime_prezime"> Ime i prezime*: </label>
+                            <input id="ime_prezime" type="text" placeholder="Ime i prezime..." maxlength="30" name="ime_prezime" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12 col-xs-12">
+                            <label for="adresa"> Adresa*: </label>
+                            <input id="adresa" type="text" placeholder="Adresa stanovanja..." maxlength="40" name="adresa" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label for="grad"> Grad*: </label>
+                            <input id="grad" type="text" placeholder="Mesto stanovanja..." maxlength="20" name="grad" required class="form-control">
+                        </div>
+                        <div class="form-group col-md-2 col-xs-6">
+                            <label for="ptbroj"> Poš. broj*: </label>
+                            <input id="ptbroj" type="number" name="ptbroj" min="1" required class="form-control">
+                        </div>
+                        <div class="form-group col-md-4 col-xs-6">
+                            <label for="drzava"> Država*: </label>
+                            <select name="drzava" id="drzava" class="form-control" required>
+                                <option value="srb" selected> Srbija </option>
+                                <option value="cg"> Crna Gora </option>
+                                <option value="rom"> Rumunija </option>
+                                <option value="ru"> Rusija </option>
+                                <option value="ger"> Nemacka </option>
+                                <option value="swe"> Svedska </option>
+                                <option value="fra"> Francuska </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="mobilni"> Mobilni telefon: </label>
+                            <input id="mobilni" type="tel" name="mobilni" placeholder="+381601111333" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="email"> Elektronska adresa*: </label>
+                            <input id="email" type="email" name="email" placeholder="mojmail@domen.com" class="form-control"  required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mojskype"> <i class="fab fa-skype" style="color: rgb(0, 175, 240); font-size: 24px;"></i> (skype)*: </label>
+                            <input id="mojskype" type="text" name="mojskype" placeholder="skypename..." class="form-control"  required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="twacc"> <i class="fab fa-twitter" style="color: rgb(0, 172, 237); font-size: 24px;"></i> (twitter):</label>
+                            <input id="twacc" type="text" name="twacc" placeholder="@mojtwitter..." class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="ghacc"> <i class="fab fa-github" style="color: #6e5494; font-size: 24px;"></i> (github):</label>
+                            <input id="ghacc" type="url" name="ghacc" placeholder="https://github.com/mojgh..." class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            Zelim da me kontaktirate putem:
+                            <div class="form-check">
+                                <input id="elposta" type="checkbox" name="elposta" checked class="form-check-input">
+                                <label for="elposta" class="form-check-label"> e-mail-a </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="mobkont" type="checkbox" name="mobkont" class="form-check-input">
+                                <label for="mobkont" class="form-check-label"> mobilnog telefona </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="twkont" type="checkbox" name="twkont" class="form-check-input">
+                                <label for="twkont" class="form-check-label"> twitter naloga </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="viberkont" type="checkbox" name="viberkont" class="form-check-input">
+                                <label for="viberkont" class="form-check-label"> viber-a </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="skypekont" type="checkbox" name="skypekont" class="form-check-input">
+                                <label for="skypekont" class="form-check-label"> skype-a </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="napomena"> Napomena: </label>
+                            <br>
+                            <textarea cols="60" rows="5" name="napomena" id="napomena" placeholder="Unesite napomenu..." class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group text-center">
+                            <input value="Submit" type="submit" class="btn btn-primary">
+                            <input value="Discard" type="reset" class="btn btn-danger">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
     
 </body>
 </html>
