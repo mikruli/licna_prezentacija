@@ -4,9 +4,9 @@ img {
     height: 200px;
 }
 
-/* .biografija {
-    display: inline-block;
-} */
+body {
+    background-color: aquamarine;
+}
 
 #slika_biograf {
     width: 25%;
